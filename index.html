@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizy - Paj Akey</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 1.1em;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #ffc107;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Quizy</h1>
+    <p>Chwazi yon nivo pou kòmanse egzamen ou:</p>
+
+    <button class="btn" onclick="location.href='questions-debutant.html'">🎯 Nivo Debutan</button>
+    <button class="btn" onclick="location.href='questions-intermediaire.html'">🔥 Nivo Entèmedyè</button>
+    <button class="btn" onclick="location.href='questions-avance.html'">💡 Nivo Avanse</button>
+    <div class="footer">© 2025 Quizy • GRoupe Eleve💻</div>
+  </div>
+</body>
+</html>

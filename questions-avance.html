@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <title>Kesyon Nivo Avanse</title>
+  <style>
+    body { font-family: 'Segoe UI'; background: linear-gradient(135deg, #0f2027, #2c5364); color: #fff; text-align: center; padding: 40px; }
+    h1 { margin-bottom: 30px; font-size: 2.5em; }
+    .quiz-container { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; max-width: 600px; margin: auto; box-shadow: 0 0 15px rgba(0,0,0,0.3); }
+    .question { margin-bottom: 20px; font-weight: bold; font-size: 1.2em; }
+    .options label { display: block; margin: 10px 0; padding: 10px; background: #ffffff22; border-radius: 10px; cursor: pointer; transition: background 0.3s; }
+    .options label:hover { background: #ffffff44; }
+    button { margin-top: 20px; padding: 10px 25px; font-size: 1em; border: none; border-radius: 25px; background-color: #fff; color: #2c5364; cursor: pointer; font-weight: bold; }
+    button:hover { background-color: #ddd; }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Nivo Avanse</h1>
+
+    <div class="question-block">
+      <div class="question">1. Kisa ki te fèt pandan Kongrè Vètyè a?</div>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a"> Yo te siyen endepandans lan</label>
+        <label><input type="radio" name="q1" value="b"> Yo te planifye dènye batay kont Lafrans</label>
+        <label><input type="radio" name="q1" value="c"> Yo te fè premye eleksyon an</label>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question">2. Ki lwa ki te mete Kreyòl kòm lang ofisyèl Ayiti?</div>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a"> Konstitisyon 1987</label>
+        <label><input type="radio" name="q2" value="b"> Konstitisyon 1805</label>
+        <label><input type="radio" name="q2" value="c"> Dekrè 1957</label>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <div class="question">3. Ki wòl Toussaint Louverture te jwe nan istwa Ayiti?</div>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a"> Li te premye prezidan</label>
+        <label><input type="radio" name="q3" value="b"> Li te dirije batay pou aboli esklavaj</label>
+        <label><input type="radio" name="q3" value="c"> Li te ekri konstitisyon 1987</label>
+      </div>
+    </div>
+
+    <button onclick="verifierRepons()">Voye Repons</button>
+  </div>
+
+  <script>
+    function verifierRepons() {
+      const repons = ['b', 'a', 'b'];
+      let score = 0;
+      document.querySelectorAll('.question-block').forEach((q, i) => {
+        const chwa = q.querySelector('input[type="radio"]:checked');
+        if (chwa && chwa.value === repons[i]) score++;
+      });
+      localStorage.setItem("score_avance", score);
+      window.location.href = "resultat_avance.html";
+    }
+  </script>
+</body>
+</html>

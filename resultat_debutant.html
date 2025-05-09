@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <title>Rezilta Debutan</title>
+  <style>
+    body { font-family: 'Segoe UI'; background: linear-gradient(135deg, #4facfe, #00f2fe); color: #fff; text-align: center; padding: 40px; }
+    h1 { font-size: 2.5em; }
+    .quiz-container { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; max-width: 600px; margin: auto; box-shadow: 0 0 15px rgba(0,0,0,0.3); }
+    .result { font-size: 2em; margin-top: 30px; }
+    button { margin-top: 20px; padding: 10px 25px; font-size: 1em; border: none; border-radius: 25px; background-color: #fff; color: #007bff; cursor: pointer; font-weight: bold; }
+    button:hover { background-color: #ddd; }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Rezilta Ou</h1>
+    <div id="resultat" class="result"></div>
+    <a href="questions-intermediaire.html"><button>Pase Nivo Apre</button></a>
+  </div>
+
+  <script>
+    const score = localStorage.getItem("score_debutant") || 0;
+    document.getElementById("resultat").innerText = `Ou jwenn ${score}/3`;
+  </script>
+</body>
+</html>
